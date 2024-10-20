@@ -122,8 +122,12 @@ public class Alumno implements Serializable {
 				+ fechaNacimiento + " - Ciclo: " + ciclo + " - Curso: " + curso + " Grupo: " + grupo;
 	}
 
-	// MÉTODO para crear un fichero BINARIO solicitado por teclado
-
+	/**
+	 * MÉTODO para crear un fichero BINARIO solicitado por teclado
+	 * 
+	 * @author Alberto Polo
+	 * @return devuelve un fichero binario
+	 */
 	public File creaFicheroBinario() {
 
 		String nombreFicheroBinario, ruta = "";
@@ -167,9 +171,13 @@ public class Alumno implements Serializable {
 		return ficheroBinario;
 	}
 
-	// MÉTODO para leer 1 alumno, crear el OBJETO alumno y guardarlo en un fichero
-	// BINARIO solicitado por teclado
-
+	/**
+	 * MÉTODO para leer 1 alumno, crear el OBJETO alumno y guardarlo en un fichero
+	 * BINARIO solicitado por teclado
+	 * 
+	 * @author Alberto Polo
+	 * @param ficheroBinario - Recibe un fichero Binario
+	 */
 	public void guarda_Objeto_Alumno_en_Fichero_Binario(File ficheroBinario) {
 
 		FileOutputStream fos = null;
@@ -280,9 +288,12 @@ public class Alumno implements Serializable {
 		System.out.println("----------------------------------------------------------------------");
 	}
 
-	// MÉTODO para leer (y mostrar) un fichero binario de alumnos que se solicitará
-	// por teclado:
-
+	/**
+	 * MÉTODO para leer (y mostrar) un fichero binario de alumnos que se solicitará
+	 * por teclado:
+	 * 
+	 * @author Alberto Polo
+	 */
 	public void leeFicheroDeAlumnos() {
 
 		System.out.println("----------------------------------------------------------------------");
@@ -293,8 +304,6 @@ public class Alumno implements Serializable {
 		System.out.print("Introduzca el NOMBRE del FICHERO de ALUMNOS, ubicado en la ruta: "
 				+ directorioActual.getAbsolutePath() + ", que desee visualizar: ");
 		File ficheroDeAlumnos = new File(directorioActual, sc.nextLine());
-
-		// File ficheroDeAlumnos = new File("D:\\AD\\tarea_5\\borrar.dat");
 
 		FileInputStream fis = null;
 		ObjectInputStream ois = null;
